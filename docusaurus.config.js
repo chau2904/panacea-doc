@@ -5,7 +5,6 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'PANACEA',
-
   tagline: 'A distributed, full-stack test automation platform for APIs, databases, mobile, hardware, and cloud.',
   favicon: 'img/favicon.ico',
 
