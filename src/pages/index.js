@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <Layout
       title={`ZIMETRICS`}
-      description="Description will go into a meta tag in <head />">
+      description="A distributed, full-stack test automation platform for APIs, databases, mobile, hardware, and cloud.">
       <HomepageHeader />
       <main>
         <HomepageIntro />
