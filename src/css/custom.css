@@ -1,0 +1,141 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #8b5cf6;
+  --ifm-color-primary-dark: #7c4ceb;
+  --ifm-color-primary-darker: #7440e0;
+  --ifm-color-primary-darkest: #5f2fc7;
+  --ifm-color-primary-light: #9c72f7;
+  --ifm-color-primary-lighter: #a47ef8;
+  --ifm-color-primary-lightest: #bc9ffa;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* Keep navbar the same in light + dark */
+  --ifm-navbar-background-color: #1b1b1d;
+  --ifm-navbar-link-color: #e5e5e5;
+  --ifm-navbar-link-hover-color: #ffffff;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #8b5cf6;
+  --ifm-color-primary-dark: #7c4ceb;
+  --ifm-color-primary-darker: #7440e0;
+  --ifm-color-primary-darkest: #5f2fc7;
+  --ifm-color-primary-light: #9c72f7;
+  --ifm-color-primary-lighter: #a47ef8;
+  --ifm-color-primary-lightest: #bc9ffa;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-navbar-background-color: #1b1b1d;
+  --ifm-navbar-link-color: #e5e5e5;
+  --ifm-navbar-link-hover-color: #ffffff;
+}
+
+/* Force same navbar look in both themes */
+.navbar {
+  background-color: #1b1b1d !important;
+  box-shadow: none;
+}
+
+.navbar__link,
+.navbar__title,
+.navbar__item {
+  color: #e5e5e5 !important;
+}
+
+.navbar__link:hover {
+  color: #ffffff !important;
+}
+
+/* Panacea: gradient hero headline (purple -> teal), matching brand reference */
+.panaceaGradientText {
+  background: linear-gradient(90deg, #8b5cf6 0%, #10b981 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+/* Panacea: match footer background to the rest of the dark theme */
+.footer--dark {
+  --ifm-footer-background-color: #0a0a0f;
+}
+
+/**
+ * Hide the "#" direct-link anchors that appear next to headings.
+ */
+.hash-link {
+  display: none !important;
+}
+
+/**
+ * Navbar logo + title alignment
+ * Logo (Zimetrics_transparent.png) already contains the "zimetrics" wordmark.
+ */
+.navbar__brand {
+  display: flex !important;
+  align-items: center !important;
+  margin-right: 1rem !important;
+}
+
+.navbar__logo {
+  height: 28px !important;
+  width: auto !important;
+  margin: 0 0.35rem 0 0 !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.navbar__logo img {
+  height: 16px !important;
+  width: auto !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
+.navbar__title {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+.navbar__title::before {
+  content: "|";
+  margin-right: 0.5rem;
+  opacity: 0.45;
+  font-weight: 400;
+}
+
+/**
+ * Match Docs + version dropdown size to logo/title (1rem)
+ */
+.navbar__item,
+.navbar__link,
+.navbar__link--active,
+.dropdown > .navbar__link,
+.navbar .dropdown__toggle {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+}
+
+/* Keep color-mode toggle visible on dark navbar */
+.navbar .clean-btn {
+  color: #e5e5e5 !important;
+}
+
+.navbar .clean-btn svg {
+  color: #e5e5e5 !important;
+  fill: currentColor !important;
+}
