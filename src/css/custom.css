@@ -77,7 +77,8 @@
 
 /**
  * Navbar logo + title alignment
- * Logo (Zimetrics_transparent.png) already contains the "zimetrics" wordmark.
+ * Logo (panacea-horizontal-color-on-dark.svg) already contains the "panacea" wordmark.
+ * Navbar is dark in both themes, so the on-dark variant is used for both.
  */
 .navbar__brand {
   display: flex !important;
@@ -95,7 +96,7 @@
 }
 
 .navbar__logo img {
-  height: 16px !important;
+  height: 28px !important;
   width: auto !important;
   max-width: none !important;
   object-fit: contain !important;

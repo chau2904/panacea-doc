@@ -6,7 +6,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'PANACEA',
   tagline: 'A distributed, full-stack test automation platform for web, APIs, databases, mobile, hardware, and cloud.',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.svg',
 
   future: {
     v4: true,
@@ -51,11 +51,9 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'Panacea',
-
         logo: {
           alt: 'Panacea Logo',
-          src: 'img/Zimetrics_transparent.png',
+          src: 'img/panacea-horizontal-color-on-dark.svg',
         },
         items: [
           {
