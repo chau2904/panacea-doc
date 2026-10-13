@@ -4,18 +4,28 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 4rem 0 2.5rem;
   text-align: center;
   position: relative;
   overflow: hidden;
-  background: #0a0a0f;
-  color: #ffffff;
+  background: var(--hp-bg);
+  color: var(--hp-heading);
+}
+
+.tagline {
+  color: var(--hp-heading);
 }
 
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
+}
+
+/* Closing call to action after the last section */
+.cta {
+  padding: 0 0 2.75rem;
+  background: var(--hp-bg);
 }
 
 .buttons {

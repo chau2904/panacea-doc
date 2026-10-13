@@ -38,6 +38,67 @@
   --ifm-navbar-link-hover-color: #ffffff;
 }
 
+/* Homepage palette: light values here, dark overrides below */
+:root {
+  --hp-bg: #f7f7fa;
+  --hp-text: #27272a;
+  --hp-heading: #18181b;
+  --hp-muted: #52525b;
+  --hp-body: #3f3f46;
+  --hp-border: rgba(24, 24, 27, 0.1);
+  --hp-divider: rgba(24, 24, 27, 0.14);
+  --hp-card-bg: linear-gradient(180deg, #ffffff, #fcfcfe);
+  --hp-card-shadow: 0 1px 3px rgba(24, 24, 27, 0.05);
+  --hp-featured-bg: linear-gradient(180deg, #fbf9ff, #f3fbf8);
+  --hp-glow-purple: rgba(139, 92, 246, 0.1);
+  --hp-glow-teal: rgba(16, 185, 129, 0.08);
+  --hp-accent: #047857;
+  --hp-accent-hover: #065f46;
+  --hp-accent-border: rgba(4, 120, 87, 0.35);
+  --hp-check: #059669;
+  --hp-icon: #7c3aed;
+  --hp-icon-border: rgba(124, 58, 237, 0.2);
+  --hp-index: rgba(24, 24, 27, 0.35);
+  --hp-modal-bg: #ffffff;
+  --hp-modal-summary: #27272a;
+  --hp-modal-shadow: 0 24px 64px rgba(24, 24, 27, 0.18);
+  --hp-overlay: rgba(24, 24, 27, 0.45);
+  --hp-control-bg: rgba(24, 24, 27, 0.06);
+  --hp-control-bg-hover: rgba(24, 24, 27, 0.12);
+  --hp-control: #52525b;
+  --hp-control-hover: #18181b;
+}
+
+[data-theme='dark'] {
+  --hp-bg: #0a0a0f;
+  --hp-text: #e5e5e5;
+  --hp-heading: #ffffff;
+  --hp-muted: #a1a1aa;
+  --hp-body: #b4b4bd;
+  --hp-border: rgba(255, 255, 255, 0.08);
+  --hp-divider: rgba(255, 255, 255, 0.06);
+  --hp-card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.015));
+  --hp-card-shadow: none;
+  --hp-featured-bg: linear-gradient(180deg, #16131f, #0f1513);
+  --hp-glow-purple: rgba(139, 92, 246, 0.14);
+  --hp-glow-teal: rgba(16, 185, 129, 0.11);
+  --hp-accent: #34d399;
+  --hp-accent-hover: #6ee7b7;
+  --hp-accent-border: rgba(16, 185, 129, 0.4);
+  --hp-check: #10b981;
+  --hp-icon: #c4b5fd;
+  --hp-icon-border: rgba(255, 255, 255, 0.1);
+  --hp-index: rgba(255, 255, 255, 0.25);
+  --hp-modal-bg: #121218;
+  --hp-modal-summary: #d4d4d8;
+  --hp-modal-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+  --hp-overlay: rgba(5, 5, 10, 0.72);
+  --hp-control-bg: rgba(255, 255, 255, 0.06);
+  --hp-control-bg-hover: rgba(255, 255, 255, 0.12);
+  --hp-control: #a1a1aa;
+  --hp-control-hover: #ffffff;
+}
+
 /* Force same navbar look in both themes */
 .navbar {
   background-color: #1b1b1d !important;

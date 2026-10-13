@@ -1,0 +1,383 @@
+/*
+ * Shared look for every homepage section below the hero:
+ * themed band (see --hp-* tokens in custom.css), gradient headings, glass cards.
+ */
+
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 2.75rem 0;
+  background: var(--hp-bg);
+  color: var(--hp-text);
+}
+
+/* First section sits close to the hero */
+.section:first-child {
+  padding-top: 0.5rem;
+}
+
+/* Hairline divider between consecutive sections */
+.section + .section {
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--hp-divider);
+}
+
+/* Soft brand glows, kept off the edges so they never show a hard seam */
+.glowA {
+  background:
+    radial-gradient(520px 260px at 15% 35%, var(--hp-glow-purple), transparent 70%),
+    radial-gradient(520px 260px at 85% 75%, var(--hp-glow-teal), transparent 70%),
+    var(--hp-bg);
+}
+
+.glowB {
+  background:
+    radial-gradient(520px 260px at 85% 35%, var(--hp-glow-teal), transparent 70%),
+    radial-gradient(520px 260px at 15% 75%, var(--hp-glow-purple), transparent 70%),
+    var(--hp-bg);
+}
+
+.header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 1.5rem;
+}
+
+.eyebrow {
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 0.5rem;
+  padding: 0.12rem 0.5rem;
+  border: 1px solid var(--hp-accent-border);
+  border-radius: 999px;
+  color: var(--hp-accent);
+  font-size: 0.52rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.title {
+  font-size: 1.3rem;
+  line-height: 1.15;
+  margin-bottom: 0.4rem;
+}
+
+.lead {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: var(--hp-muted);
+  margin-bottom: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem 1.5rem 1.4rem;
+  border: 1px solid var(--hp-border);
+  border-radius: 14px;
+  background: var(--hp-card-bg);
+  box-shadow: var(--hp-card-shadow);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(139, 92, 246, 0.5);
+  box-shadow: 0 12px 32px rgba(139, 92, 246, 0.15);
+}
+
+/* Gradient border for a featured card */
+.featured {
+  border: 1px solid transparent;
+  background:
+    var(--hp-featured-bg) padding-box,
+    linear-gradient(135deg, #8b5cf6, #10b981) border-box;
+  box-shadow: 0 0 32px rgba(139, 92, 246, 0.16);
+}
+
+.featured:hover {
+  border-color: transparent;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  margin-bottom: 1.1rem;
+}
+
+/* Icon and title sharing one row */
+.cardHead {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.cardHead .cardTitle {
+  margin-bottom: 0;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(16, 185, 129, 0.2));
+  border: 1px solid var(--hp-icon-border);
+  color: var(--hp-icon);
+}
+
+.icon svg {
+  width: 11px;
+  height: 11px;
+}
+
+.index {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.7rem;
+  color: var(--hp-index);
+}
+
+.badge {
+  flex-shrink: 0;
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #8b5cf6, #10b981);
+  color: #ffffff;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.cardTitle {
+  color: var(--hp-heading);
+  font-size: 0.94rem;
+  margin-bottom: 0.65rem;
+}
+
+.cardTitleLg {
+  color: var(--hp-heading);
+  font-size: 1.12rem;
+  margin-bottom: 0.65rem;
+}
+
+.text {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: var(--hp-body);
+  margin-bottom: 0;
+}
+
+.points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.points li {
+  position: relative;
+  padding-left: 1.1rem;
+  margin-bottom: 0.7rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: var(--hp-body);
+}
+
+.points li:last-child {
+  margin-bottom: 0;
+}
+
+/* Teal check mark */
+.points li::before {
+  content: '';
+  position: absolute;
+  left: 0.15rem;
+  top: 0.32rem;
+  width: 0.26rem;
+  height: 0.48rem;
+  border: solid var(--hp-check);
+  border-width: 0 1.5px 1.5px 0;
+  transform: rotate(45deg);
+}
+
+/* Compact, clickable highlight card */
+.cardButton {
+  width: 100%;
+  padding: 0.85rem 1.25rem 1rem;
+  font: inherit;
+  text-align: left;
+  color: inherit;
+  cursor: pointer;
+}
+
+.cardButton .cardTop {
+  margin-bottom: 0.6rem;
+}
+
+.cardButton:focus-visible {
+  outline: 2px solid var(--hp-accent);
+  outline-offset: 2px;
+}
+
+.summary {
+  font-size: 0.74rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--hp-body);
+  margin-bottom: 0;
+}
+
+.more {
+  margin-top: auto;
+  padding-top: 0.7rem;
+  color: var(--hp-accent);
+  font-size: 0.7rem;
+  font-weight: 600;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.cardButton:hover .more,
+.cardButton:focus-visible .more {
+  opacity: 1;
+}
+
+/* Detail modal */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: var(--hp-overlay);
+  backdrop-filter: blur(4px);
+  animation: fadeIn 0.18s ease;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 560px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 1.25rem 1.5rem 1.5rem;
+  border: 1px solid var(--hp-border);
+  border-radius: 16px;
+  background: var(--hp-modal-bg);
+  color: var(--hp-text);
+  box-shadow: var(--hp-modal-shadow);
+  animation: popIn 0.2s ease;
+}
+
+.modal .cardTop {
+  margin-bottom: 0.6rem;
+  padding-right: 2rem;
+}
+
+.modal .summary {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--hp-divider);
+  color: var(--hp-modal-summary);
+}
+
+.close {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 8px;
+  background: var(--hp-control-bg);
+  color: var(--hp-control);
+  font-size: 1.1rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.close:hover {
+  background: var(--hp-control-bg-hover);
+  color: var(--hp-control-hover);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: translateY(8px) scale(0.98); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .overlay,
+  .modal {
+    animation: none;
+  }
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  color: var(--hp-accent);
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.link:hover {
+  color: var(--hp-accent-hover);
+  text-decoration: none;
+}
+
+@media screen and (max-width: 996px) {
+  .section {
+    padding: 2.25rem 0;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .grid,
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 0.8rem 1.1rem 1.1rem;
+  }
+}

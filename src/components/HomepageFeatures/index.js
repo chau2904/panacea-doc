@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
-import styles from './styles.module.css';
+import styles from '../HomepageSection.module.css';
 
 const FeatureList = [
   {
@@ -77,27 +77,37 @@ const FeatureList = [
   },
 ];
 
-function Feature({title, description}) {
+function Feature({title, description, index}) {
   return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+    <article className={styles.card}>
+      <div className={styles.cardTop}>
+        <span className={styles.index}>{String(index + 1).padStart(2, '0')}</span>
       </div>
-    </div>
+      <Heading as="h3" className={styles.cardTitle}>
+        {title}
+      </Heading>
+      <p className={styles.text}>{description}</p>
+    </article>
   );
 }
 
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
+    <section className={clsx(styles.section, styles.glowB)}>
       <div className="container">
-        <div className="text--center" style={{marginBottom: '3rem'}}>
-          <Heading as="h2">Key Capabilities</Heading>
+        <div className={styles.header}>
+          <span className={styles.eyebrow}>Why Teams Choose Panacea</span>
+          <Heading as="h2" className={clsx(styles.title, 'panaceaGradientText')}>
+            Key Capabilities
+          </Heading>
+          <p className={styles.lead}>
+            Engineered for depth, designed for clarity — the foundations that
+            set Panacea apart.
+          </p>
         </div>
-        <div className="row">
+        <div className={styles.grid}>
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <Feature key={idx} index={idx} {...props} />
           ))}
         </div>
       </div>
