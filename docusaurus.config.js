@@ -8,6 +8,13 @@ const config = {
   tagline: 'A distributed, full-stack test automation platform for web, APIs, databases, mobile, hardware, and cloud.',
   favicon: 'img/favicon.svg',
 
+  headTags: [
+    {
+      tagName: 'link',
+      attributes: {rel: 'apple-touch-icon', href: '/img/apple-touch-icon.png'},
+    },
+  ],
+
   future: {
     v4: true,
   },
@@ -15,8 +22,8 @@ const config = {
   url: 'https://panacea-doc.vercel.app/',
   baseUrl: '/',
 
-  organizationName: 'chau2904', 
-  projectName: 'panacea_doc',
+  organizationName: 'panacea-zimetrics',
+  projectName: 'panacea_docs',
   onBrokenLinks: 'throw',
 
   i18n: {
@@ -46,7 +53,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/social_card.jpg',
+      image: 'img/social_card.png',
       colorMode: {
         respectPrefersColorScheme: true,
       },
